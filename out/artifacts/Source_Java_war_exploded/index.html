@@ -1,0 +1,82 @@
+<!--
+AUTHOR: Sojin Lee
+FILE NAME: index.html
+CREATED: Dec 16 2017
+UPDATED: Dec 16 2017
+DESCRIPTION: This is a main html file for the Assignment2 which enables users 
+             to select the radio button and see the updated game consoles
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Console Sales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- include JavaScript ==============================================-->
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/Logger.js"></script>
+        <script type="text/javascript" src="js/Chart.js"></script>        
+
+        <!-- include CSS =====================================================-->
+        <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Game Console Sales</h1>
+            <p>Game console hardware and software sales
+                <br>
+                Source: <a href="http://www.vgchartz.com/platforms/">www.vgchartz.com/platforms</a>
+            </p>
+
+            <!-- 3 radio buttons  =====================================================-->
+            <fieldset id="group1">
+                <legend>Select Category</legend>
+                <label><input type="radio" checked id="radioHardware" name="group1" value="hardwareSales">Hardware Sales</label>&nbsp;
+                <label><input type="radio" id="radioSoftware" name="group1" value="softwareSales">Software Sales</label>&nbsp;
+                <label><input type="radio" id="radioGameTitles" name="group1" value="gameTitles">Number of Game Titles</label>
+            </fieldset>
+            <br>
+
+            <!-- a table with a two column : name, value ==============================-->
+            <div class="col">
+                <table id="tableConsole">
+                    <tr><th>Console Name</th><th id="valueHeading">Value</th></tr>
+                    <tr><td>GameCube (GC)</td><td>0</td></tr>
+                    <tr><td>Wii (Wii)</td><td>0</td></tr>
+                    <tr><td>Wii U (WiiU)</td><td>0</td></tr>
+                    <tr><td>PlayStation 2 (PS2)</td><td>0</td></tr>
+                    <tr><td>PlayStation 3 (PS3)</td><td>0</td></tr>
+                    <tr><td>PlayStation 4 (PS4)</td><td>0</td></tr>
+                    <tr><td>Xbox (XB)</td><td>0</td></tr>
+                    <tr><td>Xbox 360 (X360)</td><td>0</td></tr>
+                    <tr><td>Xbox One (XOne)</td><td>0</td></tr>
+                    <tr><td>Nintendo 3DS (3DS)</td><td>0</td></tr>
+                    <tr><td>Nintendo 64 (N64)</td><td>0</td></tr>
+                    <tr><td>Nintendo DS (DS)</td><td>0</td></tr>
+                </table>
+            </div>
+            
+            <!-- a chart for the checked name, value ===================================-->
+            <div class="col">
+                <canvas id="canvasConsole1" width="300" height="360">
+                </canvas>
+            </div>
+            <div class="col">
+                <canvas id="canvasConsole2" width="300" height="360">
+                </canvas>
+            </div>
+            <div class="col">
+                <canvas id="canvasConsole3" width="300" height="360">
+                </canvas>
+            </div>
+            <div class="clear">
+                &nbsp;
+            </div>
+
+            <footer>
+                &copy; 2017 Sojin Lee (leesoji@sheridancollege.ca)
+            </footer>
+        </div>
+    </body>
+</html>
